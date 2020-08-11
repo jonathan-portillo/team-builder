@@ -1,15 +1,18 @@
 import React, { useState } from "react";
 import "./App.css";
 import members from "./members";
+import Form from "./Components/Form";
+import MembersList from "./Components/MembersList";
 
 function App() {
-  const [data, setData] = useState(members);
-  console.log(useState(members));
+  const [member, setMember] = useState(members);
+  console.log(members);
 
   return (
     <div className="App">
       <header className="App-header">
-        <p></p>
+        <Form data={member} />
+        <MembersList data={member} />
       </header>
     </div>
   );

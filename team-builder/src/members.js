@@ -1,4 +1,4 @@
-const members = [
+export default [
   {
     id: 0,
     name: "Red",
@@ -24,5 +24,3 @@ const members = [
     role: "Backend Engineer",
   },
 ];
-
-export default members;
