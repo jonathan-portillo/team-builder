@@ -8,12 +8,18 @@ function App() {
   const [member, setMember] = useState(members);
   console.log(members);
 
+  const addNewMember = (e) => {
+    setMember([...member, { ...e, id: Date.now() }]);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <Form data={member} />
-        <MembersList data={member} />
+      <header>
+        <h1>Members List</h1>
       </header>
+      <div>
+        <Form addNewMember={addNewMember} />
+        <MembersList member={member} />
+      </div>
     </div>
   );
 }
