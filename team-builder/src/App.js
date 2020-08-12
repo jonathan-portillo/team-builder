@@ -8,8 +8,8 @@ function App() {
   const [member, setMember] = useState(members);
   console.log(members);
 
-  const addNewMember = (e) => {
-    setMember([...member, { ...e, id: Date.now() }]);
+  const addNewMember = (newMember) => {
+    setMember([...member, newMember]);
   };
   return (
     <div className="App">
